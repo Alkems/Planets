@@ -1,1 +1,2 @@
-﻿global using SolarPlanets.Views;
+﻿//aaaaa
+global using SolarPlanets.Views;
