@@ -1,4 +1,4 @@
-﻿using Models;
+﻿using SolarPlanets.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -25,8 +25,30 @@ namespace Services
 
                 }
 
+            },
+
+            new()
+            {
+                Name = "Venus",
+                Subtitle = "The pressure cooker",
+                HeroImage = "venus.png",
+                Description = "Venus is the second planet from the Sun. It is sometimes called Earth's \"sister\" or \"twin\" planet as it is almost as large and has a similar composition.",
+                AccentColorStart = Color.FromArgb("#a6393b"),
+                AccentColorEnd = Color.FromArgb("#d17f21"),
+                Images = new()
+                {
+                    "https://www.google.com/url?sa=i&url=https%3A%2F%2Fphys.org%2Fnews%2F2022-12-venus-earth-like-lithospheric-thickness.html&psig=AOvVaw2yn1AapaDz2rjZrrYorzdJ&ust=1680183346110000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPDtiPGggf4CFQAAAAAdAAAAABAD",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/143_Venus-800x600.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/73_carousel_mercury_2.jpg",
+                    "https://solarsystem.nasa.gov/system/feature_items/images/147_Hubble_Venus_Clouds-800x600.jpg"
+
+                }
+
             }
         };
+
+        public static List<Planet> GetAllPlanets()
+            => planets;
 
         public static List<Planet> GetFeaturedPlanets()
         {

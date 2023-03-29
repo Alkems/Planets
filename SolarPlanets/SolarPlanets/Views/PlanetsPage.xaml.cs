@@ -9,9 +9,15 @@ public partial class PlanetsPage : ContentPage
 	public PlanetsPage()
 	{
 		InitializeComponent();
-
-		lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
 	}
+
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+
+        lstPopularPlanets.ItemsSource = PlanetsService.GetFeaturedPlanets();
+		lstAllPlanets.ItemsSource = PlanetsService.GetAllPlanets();
+    }
 
 	async void Planets_SelectionChanged(System.Object Sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
 	{
