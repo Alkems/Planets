@@ -1,5 +1,6 @@
-﻿//aaaaa
+﻿//Global using
 global using SolarPlanets.Views;
+global using SolarPlanets.Models;
 
 global using Microsoft.Maui;
 global using Microsoft.Maui.Controls;

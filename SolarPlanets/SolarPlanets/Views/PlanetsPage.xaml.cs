@@ -1,4 +1,5 @@
 using Services;
+using Views;
 
 namespace SolarPlanets.Views;
 
@@ -21,7 +22,7 @@ public partial class PlanetsPage : ContentPage
 
 	async void Planets_SelectionChanged(System.Object Sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
 	{
-		//await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
+		await Navigation.PushAsync(new PlanetDetailsPage(e.CurrentSelection.First() as Planet));
 	}
 
 
