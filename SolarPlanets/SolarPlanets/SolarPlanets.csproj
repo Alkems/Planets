@@ -34,8 +34,8 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\rider.svg" />
+		
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
@@ -51,11 +51,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\queen.jpg" />
+	  <None Remove="Resources\Images\ceres.jpg" />
+	  <None Remove="Resources\Images\eris.png" />
+	  <None Remove="Resources\Images\haumea.jpg" />
+	  <None Remove="Resources\Images\makemake.jpg" />
+	  <None Remove="Resources\Images\pluto.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Folder Include="Resources\Fonts\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\appicon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

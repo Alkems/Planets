@@ -79,10 +79,45 @@
                     HeightRequest="2"
                     Stroke="Transparent"
                     Fill="{StaticResource LightBorderColor}" />
-
+                
+                <!--Planet Gallery-->
                 <Label
-                    Style="{StaticResource AllPlanetHeaderSubtitleStyle}"
+                    Style="{StaticResource PlanetHeaderSubtitleStyle}"
                     Text="Gallery" />
+
+                <CollectionView
+                    Margin="0, -6, 0, 0"
+                    
+                    HeightRequest="400"
+                    WidthRequest="400"
+                    ItemsSource="{Binding Images}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                            Orientation="Horizontal"
+                            ItemSpacing="16">
+                        </LinearItemsLayout>
+
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image
+                                Source="{Binding .}"
+                                Aspect="AspectFill"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"
+                                HeightRequest="300"
+                                WidthRequest="300">
+                                <Image.Clip>
+                                    <RoundRectangleGeometry
+                                        Rect="0, 0, 300, 300"
+                                        CornerRadius="16"/>
+                                </Image.Clip>
+                            </Image>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
 
 
